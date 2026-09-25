@@ -1,0 +1,156 @@
+/* 1. Reset Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Main Background */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background: url('image.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+/* طبقة تظليل للخلفية */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* 3. Typography */
+.main-title {
+    font-size: 4rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.sub-title {
+    color: #ffcc00;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* 4. Countdown Boxes */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.1);
+    width: 120px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.number {
+    display: block;
+    font-size: 3rem;
+    padding: 20px 10px;
+    font-weight: bold;
+}
+
+.label {
+    display: block;
+    background: white;
+    color: black;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* 5. Form Styles */
+.newsletter p {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+.input-group input {
+    padding: 12px 15px;
+    width: 300px;
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.input-group button {
+    padding: 12px 20px;
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.3s ease;
+}
+
+.input-group button:hover {
+    background: #e6b800;
+}
+
+/* 6. Media Queries (الشاشات الصغيرة) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .countdown {
+        gap: 15px;
+    }
+
+    .time-box {
+        width: 100px;
+    }
+
+    .number {
+        font-size: 2.2rem;
+        padding: 15px 5px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .input-group input,
+    .input-group button {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 4px;
+    }
+}
